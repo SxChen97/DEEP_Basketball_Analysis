@@ -1,12 +1,11 @@
 library(lattice)
 library(ggplot2)
 
-df_master = read.csv("/Users/maxbender/R\ Studio\ Workspace/DEEP\ -\ Basketball/basketball_master.csv")
-df_hof = read.csv("/Users/maxbender/R\ Studio\ Workspace/DEEP\ -\ Basketball/basketball_hof.csv")
-df_players = read.csv("/Users/maxbender/R\ Studio\ Workspace/DEEP\ -\ Basketball/basketball_players.csv")
+df_awards = read.csv("basketball_awards_players.csv")
+df_hof = read.csv("basketball_hof.csv")
+df_players = read.csv("basketball_players.csv")
 
 head(df_hof)
 head(df_players)
-pairs(df_players[2:5])
 
-df_merged = merge(df_players, df_hof, by.x = c("playerID"), by.y = c("hofID"), all = T)
+df_hof_players = merge(df_players, df_hof, by.x = c("playerID"), by.y = c("hofID"), all = T)
