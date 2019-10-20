@@ -14,7 +14,7 @@ names(df_hof_players)
 head(df_hof_players)
 
 #Create Scatter Plot Matrix with Numerical Stats (this will take a couple minutes to run!!)
-pairs(df_hof_players[8:16])
+#pairs(df_hof_players[8:16])
 
 #EDA for points, rebounds, and assists
 mean(df_careers$points)
